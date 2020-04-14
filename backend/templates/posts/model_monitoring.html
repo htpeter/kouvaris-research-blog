@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+</head>
+
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+    <article>
+        <h1 id="tufte-css">Model Monitoring Spec</h1>
+        <p class="subtitle">last edited on 2020-04-04</p>
+        <section>
+            <h2 id="topics-overview">Project Goals</h2>
+            <p>
+                <span class="newthought">Tracking model performance</span>, is
+                understood as necessary
+                due to the shifting nature of data and statistical methods. An less mentioned secondary point
+                is that close monitoring of your model can help build intuition about where its failing and give your
+                a clearer sense of what should be updated in the future. This is no surprise to professionals, who have
+                been doing this in some for for a very long time.
+            </p>
+
+            <p>
+                In this document, I have specced out an abstracted model for monitoring ML architectures, with the
+                project goal being to
+                create a process, paired GUI, and lightweight reporting tool which lets a Scientist monitor their
+                predictions.
+
+                We can make predictions about so many things in this world, so the problems we attempt to solve for
+                our User are broad at a glance.
+                <ul class="user-story-items">
+                    <li>
+                        Add models I've built and their data stream to a list where I can monitor their performance.
+                    </li>
+                    <li>
+                        Explore subsets of examples that are performing poorly.
+                    </li>
+                    <li>
+                        Explore model performance changes over time.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                We complete these tasks in many manual ways through code and processes, however the goal is to
+                systemetize this
+                so we can leverage far more powerful tools than are possible to be built on top of every manual
+                solution.
+
+                Simply put, the goal is to achieve economies of scale
+                <label for="sn-proprietary-monotype-bembo" class="margin-toggle sidenote-number"></label>
+                <input type="checkbox" id="sn-proprietary-monotype-bembo" class="margin-toggle" />
+                <span class="sidenote">Users new to the idea of economies of scale can
+                    <a href="https://en.wikipedia.org/wiki/Economies_of_scale">see Wikipedia</a>
+                    for more information.
+                </span>
+                with regards to information we can inject given an ever increasing amount of labor,
+                with the key value proposition being that this type of monitoring will dramatically improve
+                a model builders intuition and potentially even reduce the anxeity of deploying more models.
+
+                While I deeply dislike Facebook, their goal to create the Newspaper for you is very much inline
+                with what I am trying to do here. Instead of a Newspaper, I want this to be your view of the world
+                you've automated, which are bound to require tune-ups. Better to know whats going on than wait until
+                things break and you lose some value which you had initially gained by building a prediction in the
+                first
+                place.
+            </p>
+        </section>
+
+        {% endblock %}
+
+</body>
+
+</html>
