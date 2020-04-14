@@ -13,33 +13,34 @@
         <h1 id="tufte-css">Model Monitoring Spec</h1>
         <p class="subtitle">last edited on 2020-04-04</p>
         <section>
-            <h2 id="topics-overview">Project Goals</h2>
+            <h2 id="why">Why Monitor</h2>
             <p>
-                <span class="newthought">Tracking model performance</span>, is
-                understood as necessary
-                due to the shifting nature of data and statistical methods. An less mentioned secondary point
-                is that close monitoring of your model can help build intuition about where its failing and give your
-                a clearer sense of what should be updated in the future. This is no surprise to professionals, who have
-                been doing this in some for for a very long time.
+                <span class="newthought">I do not enjoy maintaining software.</span> I know this is a very
+                foolish perspective for me to have, because most software only starts to pay off its debts after its
+                been used
+                many times.
+                I've procrastinated learning this necessary skill for a long time. The hardest part of learning for me
+                has always been overcoming
+                my stubborness to doing something I don't want to. Alas, my ego continues to kick my ass.
             </p>
 
+            <h2 id="topics-overview">Project Goals</h2>
             <p>
+                We can many hypothesis in this world, but to truly learn, proper tracking is required.
                 In this document, I have specced out an abstracted model for monitoring ML architectures, with the
                 project goal being to
-                create a process, paired GUI, and lightweight reporting tool which lets a Scientist monitor their
-                predictions.
+                create a tool that lets Scientists monitor their software experiments.
 
-                We can make predictions about so many things in this world, so the problems we attempt to solve for
-                our User are broad at a glance.
+                The tool should help me
                 <ul class="user-story-items">
                     <li>
-                        Add models I've built and their data stream to a list where I can monitor their performance.
+                        Add models I've built with their data streams so I can monitor their ongoing performance.
                     </li>
                     <li>
-                        Explore subsets of examples that are performing poorly.
+                        Explore subsets of data that are performing poorly.
                     </li>
                     <li>
-                        Explore model performance changes over time.
+                        Leave notes on data subsets for later adjusting.
                     </li>
                 </ul>
             </p>
