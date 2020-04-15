@@ -13,5 +13,10 @@ def model_monitoring_post():
     return render_template("./posts/model_monitoring.html")
 
 
+@app.route("/posts/tiered_open_education")
+def tiered_open_education():
+    return render_template("./posts/tiered_open_education.html")
+
+
 if __name__ == "__main__":
     app.run(debug=False)
