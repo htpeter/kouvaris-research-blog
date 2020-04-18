@@ -1,2 +1,5 @@
 flask
 gunicorn
+markdown
+python-slugify
+mdx_truly_sane_lists

@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+</head>
+
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1 id="tufte-css">Model Monitoring Spec</h1>
+<h2>Why Monitor</h2>
+<p>I do not enjoy maintaining software. I know this is a very foolish perspective for me to have, because most software only starts to pay off its debts after its been used many times. I've procrastinated learning this necessary skill for a long time. The hardest part of learning for me has always been overcoming my stubborness to doing something I don't want to. Alas, my ego continues to kick my ass.</p>
+<h2>Project Goals</h2>
+<p>We can many hypothesis in this world, but to truly learn, proper tracking is required. In this document, I have specced out an abstracted model for monitoring ML architectures, with the project goal being to create a tool that lets Scientists monitor their software experiments. The tool should help me
+    - Add models I've built with their data streams so I can monitor their ongoing performance.
+    - Explore subsets of data that are performing poorly.
+    - Leave notes on data subsets for later adjusting.
+We complete these tasks in many manual ways through code and processes, however the goal is to systemetize this so we can leverage far more powerful tools than are possible to be built on top of every manual solution. Simply put, the goal is to achieve economies of scale  Users new to the idea of economies of scale can <a href="https://en.wikipedia.org/wiki/Economies_of_scale">see Wikipedia</a> for more information.with regards to information we can inject given an ever increasing amount of labor, with the key value proposition being that this type of monitoring will dramatically improve a model builders intuition and potentially even reduce the anxeity of deploying more models. While I deeply dislike Facebook, their goal to create the Newspaper for you is very much inline with what I am trying to do here. Instead of a Newspaper, I want this to be your view of the world you've automated, which are bound to require tune-ups. Better to know whats going on than wait until things break and you lose some value which you had initially gained by building a prediction in the first place.</p>
+
+   {% endblock %}
+
+</body>
+</html>
