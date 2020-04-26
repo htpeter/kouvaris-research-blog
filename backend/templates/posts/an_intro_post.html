@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+</head>
+
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+    <article>
+        <h1 id="tufte-css">My SQL Philosophy and Snippets</h1>
+        <p class="subtitle">last edited on 2020-04-24</p>
+        <section>
+            <h2 id="why">SQL Style</h2>
+            <p>
+                SQL is easy to learn but so broad that mastery takes extensive time. The features and techniques I'm
+                sharing here
+                are those that make getting insights cheap, easy and maintainable.
+
+                After a few 100,000 lines of SQL, I have some very strong opinions on the language. These insights come
+                from not just volume but having worked with a diverse array
+                writing SQL on everything from large scale 3NF databases and optimized analytics tables to unstructured
+                <code>jsonb</code> blobs (*shivers at the thought).
+            </p>
+
+            <h2 id="topics-overview"> Dealing With Time-Series Events </h2>
+            <p>
+                There are 3 tools I love to use time and time again when dealing with time. These are (1)
+                <code>row_number()</code> paired
+                with <code>partition by X order by Y</code>, (2) <code>lag(M, #)</code> paired with
+                <code>partition by X order by Y</code>, and
+                extensive use of <code>case</code> statements so I can tell my actions apart if multiple nuances exist.
+
+                Using these things you can easily create
+                <pre><code>
+                    SELECT 
+                        a,
+                        b,
+                        c
+                    FROM 
+                        abc 
+                </code></pre>
+            </p>
+            <p>
+                We complete these tasks in many manual ways through code and processes, however the goal is to
+                systemetize this
+                so we can leverage far more powerful tools than are possible to be built on top of every manual
+                solution.
+
+                Simply put, the goal is to achieve economies of scale
+                <label for="sn-proprietary-monotype-bembo" class="margin-toggle sidenote-number"></label>
+                <input type="checkbox" id="sn-proprietary-monotype-bembo" class="margin-toggle" />
+                <span class="sidenote">Users new to the idea of economies of scale can
+                    <a href="https://en.wikipedia.org/wiki/Economies_of_scale">see Wikipedia</a>
+                    for more information.
+                </span>
+                with regards to information we can inject given an ever increasing amount of labor,
+                with the key value proposition being that this type of monitoring will dramatically improve
+                a model builders intuition and potentially even reduce the anxeity of deploying more models.
+
+                While I deeply dislike Facebook, their goal to create the Newspaper for you is very much inline
+                with what I am trying to do here. Instead of a Newspaper, I want this to be your view of the world
+                you've automated, which are bound to require tune-ups. Better to know whats going on than wait until
+                things break and you lose some value which you had initially gained by building a prediction in the
+                first
+                place.
+            </p>
+        </section>
+
+        {% endblock %}
+
+</body>
+
+</html>

@@ -12,6 +12,10 @@ def homepage():
 def model_monitoring_post():
     return render_template("./posts/model_monitoring.html")
 
+@app.route("/posts/an_intro_post")
+def an_intro_post():
+    return render_template("./posts/an_intro_post.html")
+
 
 @app.route("/posts/tiered_open_education")
 def tiered_open_education():
