@@ -1,52 +1,22 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+{% extends "headers_template.html" %}
+{% block content %}
 
 <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>{{ page_name }}</title>
 </head>
 
-<body>
-    {% extends "template.html" %}
-    {% block content %}
-    <article>
-        <h1 id="tufte-css">Research & Development</h1>
-        <p class="subtitle">by Peter</p>
-        <section>
-            <h2 id="topics-overview">To Listen To A Stranger</h2>
+<body></body>
 
-            <p>
-                <span class="newthought"> To read my work, someone you know nothing about, </span> is a lot to ask.
-                We all write for some reason or another. kouvaris.io exists to engage those curious about
-                computation, music and life. I hope you find a few pieces that inspire you to create, just as other
-                works have inspired this.
-            </p>
+{% for page in pages %}
+<article>
+    <h2 id="tufte-css"> {{ page.get('page_name') }} </h2>
+    <p>
+        {{ page.get('content') }}
+    </p>
+</article>
 
-
-
-            <h2 id="topics-overview">Recent Pieces of Work</h2>
-            <p>
-                <span class="newthought">The following writings are the most recent</span>, and as a result will be
-                the most topical. Please feel free to find topics you enjoy as denoted by the color-coded pills.
-                <ul class="menu">
-                    <li>
-                        <a href="{{ url_for('tiered_open_education') }}">
-                            A System for Opening Educational Institutions at 2020-04-15 8:32:50 AM
-                        </a>
-                        <!-- <br><button class="green-pill">Machine Learning Tool</button> -->
-                    </li>
-                    <li>
-                        <a href="{{ url_for('model_monitoring_post') }}">
-                            Model Monitoring Spec published at 2020-04-13 10:59:53 PM
-                        </a>
-                        <!-- <br><button class="green-pill">Machine Learning Tool</button> -->
-                    </li>
-                    <!-- <li>About published at 2020-04-03 12:43:50 PM</li> -->
-                </ul>
-            </p>
-
-            {% endblock %}
+{% endfor %}
 
 </body>
-
-</html>
+{% endblock %}
